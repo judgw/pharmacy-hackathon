@@ -1,3 +1,123 @@
+## Verified screenshots of Fast API End points 
+
+## Fuzzy:
+
+![Fuzzy Search](fuzzy.png)
+
+Explanation of output 
+If you searched for "avastn" (notice the typo — missing i).
+
+
+The query used:
+
+ SELECT name 
+FROM medicines
+ORDER BY similarity(lower(name), lower('avastn')) DESC
+LIMIT 20;
+PostgreSQL’s pg_trgm similarity finds names that are similar in spelling, not exact.
+
+
+That’s why you got results like:
+"Avastin 10mg Tablet"  (real intended word)
+
+
+"Avastin 20mg Tablet" 
+
+
+"Avastin 100mg Injection" 
+
+
+"Avastin 400mg Injection" 
+
+
+
+
+
+
+
+## Substring query:
+![Substring_Search](substring.png)
+Explanation of output:
+You used the substring search endpoint.
+
+
+The query parameter is q=injection.
+
+
+This means: “Find all medicines where the word injection is present in the name.”
+
+
+Your database contains many medicines with "Injection" in their name field.
+
+
+The endpoint correctly matched them and returned only those names.
+
+
+So the output looks exactly right because:
+ All results have "Injection" in their names.
+ Other medicines (like tablets or syrups) don’t appear, since they don’t contain "injection".
+
+
+
+
+
+
+
+
+## Full Text query:
+
+![Full_Text](fulltext.png)
+
+The results contain medicines whose names contain Anti:
+
+
+"Anti Cold Syrup", "Anti CC Drop", "Anti-Spas 10mg/250mg Tablet", etc.
+
+
+Full-text search is not a raw substring match.
+ It tokenizes text into words (to_tsvector), and then checks if plainto_tsquery('anti') matches any token.
+
+
+That’s why you see medicines where Anti is a standalone token.
+
+
+
+
+
+
+## Prefix:
+![Prefix Search](prefix.png)
+
+
+Explanation of output 
+Prefix search means: match names that start with unic (case-insensitive).
+
+
+SQL used under the hood:
+
+ SELECT name 
+FROM medicines
+WHERE lower(name) LIKE lower('unic%')
+LIMIT 20;
+That’s why we got results like:
+
+
+"Unicafen MR 100mg/325mg/250mg Tablet"
+
+
+"Unicain 2% Injection"
+
+
+"Unicalcin Nasal Spray"
+
+
+"Unicef 200mg Tablet"
+
+
+ All names start with Unic... 
+
+# Steps to set up code and execute
+
 ## Python Environment Setup
 
 Create and activate a virtual environment:
@@ -162,135 +282,5 @@ Almost All(<10 ms)
 Throughput improved proportionally (from ~2–50 q/s → 200+ q/s).
 
 ### submission_db.json and submission.json were generated successfully with improved metrics.
-
-
-## Fast API End points 
-
-## Fuzzy:
-
-![Fuzzy Search](fuzzy.png)
-
-Explanation of output 
-If you searched for "avastn" (notice the typo — missing i).
-
-
-The query used:
-
- SELECT name 
-FROM medicines
-ORDER BY similarity(lower(name), lower('avastn')) DESC
-LIMIT 20;
-PostgreSQL’s pg_trgm similarity finds names that are similar in spelling, not exact.
-
-
-That’s why you got results like:
-"Avastin 10mg Tablet"  (real intended word)
-
-
-"Avastin 20mg Tablet" 
-
-
-"Avastin 100mg Injection" 
-
-
-"Avastin 400mg Injection" 
-
-
-
-
-
-
-
-## Substring query:
-![Substring_Search](substring.png)
-Explanation of output:
-You used the substring search endpoint.
-
-
-The query parameter is q=injection.
-
-
-This means: “Find all medicines where the word injection is present in the name.”
-
-
-Your database contains many medicines with "Injection" in their name field.
-
-
-The endpoint correctly matched them and returned only those names.
-
-
-So the output looks exactly right because:
- All results have "Injection" in their names.
- Other medicines (like tablets or syrups) don’t appear, since they don’t contain "injection".
-
-
-
-
-
-
-
-
-## Full Text query:
-
-![Full_Text](fulltext.png)
-
-The results contain medicines whose names contain Anti:
-
-
-"Anti Cold Syrup", "Anti CC Drop", "Anti-Spas 10mg/250mg Tablet", etc.
-
-
-Full-text search is not a raw substring match.
- It tokenizes text into words (to_tsvector), and then checks if plainto_tsquery('anti') matches any token.
-
-
-That’s why you see medicines where Anti is a standalone token.
-
-
-
-
-
-
-## Prefix:
-![Prefix Search](prefix.png)
-
-
-Explanation of output 
-Prefix search means: match names that start with unic (case-insensitive).
-
-
-SQL used under the hood:
-
- SELECT name 
-FROM medicines
-WHERE lower(name) LIKE lower('unic%')
-LIMIT 20;
-That’s why we got results like:
-
-
-"Unicafen MR 100mg/325mg/250mg Tablet"
-
-
-"Unicain 2% Injection"
-
-
-"Unicalcin Nasal Spray"
-
-
-"Unicef 200mg Tablet"
-
-
- All names start with Unic... 
-
-
-
-
-
-
-
-
-
-
-
 
 
