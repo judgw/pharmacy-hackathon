@@ -45,14 +45,7 @@ Full-text → antibiotic
 
 ## Results:
 
-| Query Type| Query   | Results | Latency(ms)
-| --------  | --------| --------|
-| Prefix    | boc     | 14      | 4.33
-| Prefix    |  unic   | 20      | 0.67
-| Prefix    | Carb    | 20      | 1.56
-| Substring |  Leekuf | 5       | 3.65
-| Fuzzy     | daxid   | 19      | 162.05
-| Full-Text |antibiotic|20      | 4.16
+![results](results.png)
 
 
 ## Analysis:
