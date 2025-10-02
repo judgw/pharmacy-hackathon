@@ -1,0 +1,9 @@
+{
+    "results": {
+      "1": ["Avastin", "Avastin Injection"],
+      "2": ["Paracetamol"],
+      "3": ["Clexane Injection", "Avastin Injection"],
+      "4": ["Amoxicillin", "Azithromycin", "Ciprofloxacin"],
+      "5": ["Ibuprofen", "Diclofenac", "Paracetamol"]
+    }
+  }

@@ -1,0 +1,115 @@
+{
+  "results": {
+    "1": [
+      "Bocarlol 6.25mg Tablet",
+      "BOCARNIDE 0.5mg Respules",
+      "BOCARSTIN-20 Tablet",
+      "Bocarstin-M 20mg/10mg Tablet",
+      "Bocef 100mg Tablet",
+      "Bocef CV 200mg/125mg Tablet",
+      "Bocef LB 200 Tablet",
+      "Bocef O 200mg/200mg Tablet",
+      "Bocet-BD 150mg/5mg Tablet",
+      "Bocin 200mg Tablet",
+      "Bocin OZ 200mg/500mg Tablet",
+      "Bocker 20mg Tablet SR",
+      "Bocker F Capsule",
+      "Bocker-C Tablet"
+    ],
+    "2": [
+      "Unicafen MR 100mg/325mg/250mg Tablet",
+      "Unicafen P 100mg/325mg Tablet",
+      "Unicain 2% Injection",
+      "Unical-D3 60K Softgel Capsule",
+      "Unicalcin 100IU Injection",
+      "Unicalcin 100mg Injection",
+      "Unicalcin 50IU Injection",
+      "Unicalcin Nasal Spray",
+      "Unicalm Forte 1mg Tablet",
+      "Unicalm Plus 0.25mg/50mg Tablet",
+      "Unicalm Plus 0.5mg/25mg Tablet",
+      "Unicalve LB 500mg/125mg Tablet",
+      "Unicarbazan Forte Tablet",
+      "Unicarbazan Forte Tablet",
+      "Unicef 1000mg Injection",
+      "Unicef 200mg Tablet",
+      "Unicef 250mg Tablet",
+      "Unicef O 200mg/200mg Tablet",
+      "Unicefax CV 200 mg/125 mg Tablet",
+      "Uniceft 1000mg Injection"
+    ],
+    "3": [
+      "Leekuf 5mg Lozenges",
+      "Leekuf Soft Gelatin Capsule",
+      "Leekuf Tablet",
+      "Neo Leekuf 5mg/2mg/10mg Tablet",
+      "Neo Leekuf SF Syrup Sugar Free"
+    ],
+    "4": [
+      "Daxid 25mg Tablet",
+      "Daxid 50mg Tablet",
+      "Daxid 50mg Tablet",
+      "Daxid 100mg Tablet",
+      "Daxid 100mg Tablet",
+      "Daxinac Gel",
+      "Daxiga-T Tablet",
+      "Daxiga 5 Tablet",
+      "Daxispas Tablet",
+      "Axid DSR Capsule",
+      "Daxiga 10 Tablet",
+      "Daxil 5mg/5mg Tablet",
+      "Daxinac-TH Tablet",
+      "Lafaxid-D  Tablet",
+      "Daxif 10mg Tablet",
+      "Daxinac-SP Tablet",
+      "Daxipar-CP Tablet",
+      "Daxocid MPS Syrup",
+      "Daxynac Gel",
+      "Daxicort 30 Tablet"
+    ],
+    "5": [
+      "Alerbloc 10mg Tablet",
+      "Alerbloc 5mg/5ml Suspension",
+      "Allzole 20mg Injection",
+      "Ancoril Syrup",
+      "Animol 500mg Tablet",
+      "Babicetom L Injection",
+      "Babicetom L Syrup",
+      "Baflox 200mg Tablet",
+      "Bakacin 500mg Injection",
+      "Balevo 500mg Tablet",
+      "Bap-D SR 30mg/40mg Capsule",
+      "Barbinol 100mg Injection",
+      "Barbinol 200mg Injection",
+      "Barbinol 20mg/5ml Syrup",
+      "Barbinol 30mg Tablet",
+      "Barbinol 60mg Tablet",
+      "Basik Plus 100mg/500mg Tablet",
+      "Basizone S 500mg/500mg Injection",
+      "Benzathine 1200000IU Injection",
+      "Benzathine 500000IU Injection"
+    ]
+  },
+  "metrics": {
+    "1": {
+      "latency_ms": 26.0,
+      "count": 14
+    },
+    "2": {
+      "latency_ms": 7.29,
+      "count": 20
+    },
+    "3": {
+      "latency_ms": 67.47,
+      "count": 5
+    },
+    "4": {
+      "latency_ms": 161.21,
+      "count": 20
+    },
+    "5": {
+      "latency_ms": 10.52,
+      "count": 20
+    }
+  }
+}
