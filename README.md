@@ -201,7 +201,7 @@ That’s why you got results like:
 
 
 
-Substring query:
+## Substring query:
 ![Substring_Search](substring.png)
 Explanation of output:
 You used the substring search endpoint.
@@ -230,7 +230,7 @@ So the output looks exactly right because:
 
 
 
-Full Text query:
+## Full Text query:
 
 ![Full_Text](fulltext.png)
 
@@ -251,7 +251,7 @@ That’s why you see medicines where Anti is a standalone token.
 
 
 
-Prefix:
+## Prefix:
 ![Prefix Search](prefix.png)
 
 
